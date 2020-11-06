@@ -79,4 +79,5 @@ steffen_user_id = '1134627099'
 steffen_rap_playlist_id = '7shzVjgaJdeO3euWSrNE3w'
 
 spot = Spotify()
-spot.getTrackInformationFromPlaylist(steffen_user_id, steffen_rap_playlist_id)
+result = spot.getTrackInformationFromPlaylist(steffen_user_id, steffen_rap_playlist_id)
+print(result)
