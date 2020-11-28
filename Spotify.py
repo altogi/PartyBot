@@ -8,7 +8,7 @@ import pprint
 from bottle import route, run, request
 
 class Spotify:
-    """A brief teston how to retrieve information from Spotify.
+    """A brief class on how to retrieve information from Spotify.
     Sources used:
         https://developer.spotify.com/documentation/web-api/reference-beta/#category-search
         https://morioh.com/p/31b8a607b2b0"""
@@ -21,6 +21,7 @@ class Spotify:
         # user_id = '1134627099'
         # cache_path='.ste'
 
+        #API AUTHORIZATION
         OAuth_Manager = SpotifyOAuth(client_id=client_id, client_secret=client_secret, redirect_uri=user_uri, username=user_id, scope=scope, cache_path=cache_path)
         # authorization_code = OAuth_Manager.get_authorization_code()
         # token = OAuth_Manager.get_access_token(code=authorization_code, check_cache=False, as_dict=False)
@@ -28,14 +29,15 @@ class Spotify:
         self.user = self.sp.current_user()
         # self.device = self.sp.devices()
         print('Successfully connected to user ' + str(self.user['display_name']))
-        self.reset_queue()
 
+        #INITIALIZATION
+        self.reset_queue()
 
     def get_playlists(self):
         """Get user's playlists, indexed by their spotify id and their name"""
         stuff = self.sp.current_user_playlists()['items']
         self.playlists = []
-        self.isPartyBot = -1
+        self.isPartyBot = -1 #Index of PartyBot queue in Spotify
         for i, s in enumerate(stuff):
             info = {'name': s['name'], 'id': s['id']}
             self.playlists.append(info)
@@ -43,7 +45,7 @@ class Spotify:
                 self.isPartyBot = i
 
     def reset_queue(self):
-        """Reset the queue, expressed as a list called PartyBot"""
+        """Reset the queue. Index of user list corresponding to queue is PartyBot"""
         # self.sp.pause_playback()
         self.get_playlists()
         if self.isPartyBot != -1:
@@ -55,48 +57,10 @@ class Spotify:
         self.empty = True
         self.queue_ids = []
         self.queue = None
-
-    def add_ids_to_queue(self, ids, shuffle=True):
-        if shuffle: #initial shuffle of songs to be added
-            random.shuffle(ids)
-
-        self.sp.user_playlist_add_tracks(self.user['id'], self.playlists[self.isPartyBot]['id'], ids)
-        self.queue_ids.append(ids)
-
-        informations = []
-        for id in ids:
-            information = self.getTrackFeatures(id)
-            informations.append(information)
-        toadd = pd.DataFrame(informations)
-
-        if self.queue is None:
-            self.queue = toadd
-        else:
-            self.queue.append(toadd, ignore_index=True)
-
-
-    def add_playlist_to_queue(self, playlist_id):
-        ids = self.getTrackIDs(playlist_id)
-        self.add_ids_to_queue(ids)
-
-    def shuffle(self):
-        ids = self.queue_ids.copy()
-        random.shuffle(ids)
-        self.sp.user_playlist_replace_tracks(self.user['id'], self.playlists[self.isPartyBot]['id'], ids)
-
-    def getTrackIDs(self, playlist_id):
-        """Returns all the track ids for a user's playlist"""
-        ids = []
-        playlist = self.sp.user_playlist(self.user['id'], playlist_id)
-        for item in playlist['tracks']['items']:
-            track = item['track']
-            ids.append(track['id'])
-        return ids
-
-    def getTrackFeatures(self, id=None, fromID=False):
-        """Returns several infomation for a track id"""
+        
+    def get_track_features(self, id):
+        """Returns infomation for a track id"""
         meta = self.sp.track(id)
-        features = self.sp.audio_features(id)
 
         # meta
         name = meta['name']
@@ -107,15 +71,16 @@ class Spotify:
         popularity = meta['popularity']
 
         # features
-        acousticness = features[0]['acousticness']
-        danceability = features[0]['danceability']
-        energy = features[0]['energy']
-        instrumentalness = features[0]['instrumentalness']
-        liveness = features[0]['liveness']
-        loudness = features[0]['loudness']
-        speechiness = features[0]['speechiness']
-        tempo = features[0]['tempo']
-        time_signature = features[0]['time_signature']
+        # features = self.sp.audio_features(id)
+        # acousticness = features[0]['acousticness']
+        # danceability = features[0]['danceability']
+        # energy = features[0]['energy']
+        # instrumentalness = features[0]['instrumentalness']
+        # liveness = features[0]['liveness']
+        # loudness = features[0]['loudness']
+        # speechiness = features[0]['speechiness']
+        # tempo = features[0]['tempo']
+        # time_signature = features[0]['time_signature']
 
         track = {'name': name,
                  'album': album,
@@ -123,30 +88,83 @@ class Spotify:
                  'release_date': release_date,
                  'length': length,
                  'popularity': popularity,
-                 'danceability': danceability,
-                 'acousticness': acousticness,
-                 'energy': energy,
-                 'instrumentalness': instrumentalness,
-                 'liveness': liveness,
-                 'loudness': loudness,
-                 'speechiness': speechiness,
-                 'tempo': tempo,
-                 'time_signature': time_signature}
+                 # 'danceability': danceability,
+                 # 'acousticness': acousticness,
+                 # 'energy': energy,
+                 # 'instrumentalness': instrumentalness,
+                 # 'liveness': liveness,
+                 # 'loudness': loudness,
+                 # 'speechiness': speechiness,
+                 # 'tempo': tempo,
+                 # 'time_signature': time_signature
+                 }
 
         return track
+        
+    def add_songs_to_queue(self, ids, shuffle=True):
+        """Add info from songs identified in list ids to queue"""
+        if shuffle: #initial shuffle of songs to be added
+            random.shuffle(ids)
 
-    def getTrackInformationFromPlaylist(self, playlist_id):
+        #Add to Spotify Playlist
+        self.sp.user_playlist_add_tracks(self.user['id'], self.playlists[self.isPartyBot]['id'], ids)
+
+        if type(ids) == list:
+            self.queue_ids = self.queue_ids + ids
+        else:
+            self.queue_ids.append(ids)
+
+        #Add info to self.queue
+        informations = []
+        for id in ids:
+            information = self.get_track_features(id)
+            informations.append(information)
+        toadd = pd.DataFrame(informations)
+
+        if self.queue is None:
+            self.queue = toadd
+        else:
+            self.queue.append(toadd, ignore_index=True)
+
+    def shuffle(self):
+        """Does a complete shuffle of the existing queue"""
+        # Shuffle list of ids
+        ids = self.queue_ids.copy()
+
+        #Reset queue based on shuffled ids
+        self.reset_queue()
+        self.add_songs_to_queue(ids)
+
+    def get_track_ids(self, playlist_id):
+        """Returns all the track ids for a user's playlist"""
+        ids = []
+        playlist = self.sp.user_playlist(self.user['id'], playlist_id)
+        for item in playlist['tracks']['items']:
+            track = item['track']
+            ids.append(track['id'])
+        return ids
+
+    def add_playlist_to_queue(self, playlist_ids):
+        """Extract song ids from a playlist identified via playlist_id and add them to queue"""
+        ids = []
+        for pids in playlist_ids:
+            ids = ids + self.get_track_ids(pids)
+        self.add_songs_to_queue(ids)
+
+    #UNUSED FUNCTIONS
+    def get_track_info_from_playlist(self, playlist_id):
         """Returns a data frame with track information for the specific playlist"""
-        ids = self.getTrackIDs(playlist_id)
+        ids = self.get_track_ids(playlist_id)
 
         informations = []
         for id in ids:
-            information = self.getTrackFeatures(id)
+            information = self.get_track_features(id)
             informations.append(information)
 
         return pd.DataFrame(informations)
 
-    def getUserTopTracks(self, time_ranges=['short_term', 'medium_term', 'long_term'], limit=50):
+    def get_user_top_tracks(self, time_ranges=['short_term', 'medium_term', 'long_term'], limit=50):
+        """Gets the current user's top tracks in a specified time frame"""
         if type(time_ranges) is not list:
             time_ranges = [time_ranges]
 
@@ -158,7 +176,8 @@ class Spotify:
                 print(i, item['name'], '//', item['artists'][0]['name'])
                 results.append(item)
 
-    def printUser(self, username):
+    def print_user(self, username):
+        """Outputs the current user"""
         self.sp.trace = True
         user = self.sp.user(username)
         pprint.pprint(user)
