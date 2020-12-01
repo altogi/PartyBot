@@ -21,81 +21,62 @@
 
 
 from flask import Flask, request
+from Chatbot import InterfaceWithTelegram
 import telegram
 import requests
 
 # token from telegram bot
-TOKEN = '1474569647:AAH13gblvp4VBIhH3B9GeMBbuyFRdDprKr0'
+#TOKEN = '1474569647:AAH13gblvp4VBIhH3B9GeMBbuyFRdDprKr0'
+
+#TELEGRAM BOT INFO:
+TOKEN = '1447273538:AAHHUe6Tuga3PxCFjYByq3NuhcVt1VRkkNM'
+username = 'virtual_dj_party_bot'
+name = 'VirtualDJ'
+
 # Flask url. Needs to be reachable via internet.  Tool ngrok is used for this
-URL = 'https://b9511b8e6068.ngrok.io/'
+URL = 'https://651cfad4c5c6.ngrok.io/'
 bot = telegram.Bot(TOKEN)
 
+interface = InterfaceWithTelegram()
 
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def receive_message():
     return "Hello World!"
 
-
-@app.route('/test', methods=['POST'])
-def receive_message_test():
-    return "In test!"
-
-
 @app.route('/setwebhook', methods=['GET', 'POST'])
 def set_webhook():
-    print("In set webhook")
     # we use the bot object to link the bot to our app which live
     # in the link provided by URL
-    s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
-    # something to let us know things work
-    if s:
-        return "webhook setup ok"
-    else:
-        return "webhook setup failed"
-
+    try:
+        s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
+        return 'Webhook Set Correctly!'
+    except:
+        return 'Error Setting Webhook'
 
 @app.route('/deletewebhook', methods=['GET', 'POST'])
 def kill_webhook():
     # we use the bot object to link the bot to our app which live
     # in the link provided by URL
-    s = bot.deleteWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
-    # something to let us know things work
-    if s:
-        return "webhook deleted ok"
-    else:
-        return "webhook deleted failed"
-
+    try:
+        s = bot.deleteWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
+        return 'Webhook Deleted Correctly!'
+    except:
+        return 'Error Deleting Webhook'
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
    # retrieve the message in JSON and then transform it to Telegram object
    update = telegram.Update.de_json(request.get_json(force=True), bot)
-
    chat_id = update.message.chat.id
    msg_id = update.message.message_id
-
    # Telegram understands UTF-8, so encode text for unicode compatibility
    text = update.message.text.encode('utf-8').decode()
-   # for debugging purposes only
-   print("got text message :", text)
 
-   # SEND TEXT TO WATSON and get response
-   # response = SendTextToWatson(text) # obviously dummy method
+   response = interface.process_text(text)
 
    # SEND RESPONSE TO TELEGRAM
-   #bot.sendMessage(chat_id=chat_id, text=response, reply_to_message_id=msg_id) # works
-
-   # GET BE DELETED
-
-   if "kids" in text:
-       # print the the message
-       message = "Group 8 for sure my lord"
-       # send the welcoming message
-       bot.sendMessage(chat_id=chat_id, text=message, reply_to_message_id=msg_id)
-   else:
-       message = "Could you repeat please?"
-       bot.sendMessage(chat_id=chat_id, text=message, reply_to_message_id=msg_id)
+   bot.sendMessage(chat_id=chat_id, text=response, reply_to_message_id=msg_id)
 
    return 'ok'
 

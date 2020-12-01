@@ -29,7 +29,7 @@ class WatsonIntegrator:
             self.session_id = response['session_id']
             # self.assistant.set_detailed_response(True)
 
-            self.console.print('Successfully connected to the assistant. Session ID: ' + str(self.session_id))
+            print('Successfully connected to the assistant. Session ID: ' + str(self.session_id))
 
         except ApiException as ex:
             self.console.print("Method failed with status code " + str(ex.code) + ": " + ex.message)
@@ -54,6 +54,7 @@ class WatsonIntegrator:
         for r in response:
             if r['response_type'] == 'option':
                 self.console.print(r['title'])
+                # print(r['title'])
                 options = r['options']
                 if numeric:
                     self.console.print('Type the number corresponding to the corresponding option:')
@@ -66,6 +67,7 @@ class WatsonIntegrator:
             elif r['response_type'] == 'text':
                 if r['text'].find(functionkey) == -1:
                     self.console.print(r['text'])
+                    # print(r['text'])
                 else:
                     cut = r['text'].find(functionkey) + len(functionkey)
                     functions.append(r['text'][cut:])
