@@ -34,7 +34,7 @@ username = 'virtual_dj_party_bot'
 name = 'VirtualDJ'
 
 # Flask url. Needs to be reachable via internet.  Tool ngrok is used for this
-URL = 'https://651cfad4c5c6.ngrok.io/'
+URL = 'https://f3506a76cd6b.ngrok.io/'
 bot = telegram.Bot(TOKEN)
 
 interface = InterfaceWithTelegram()

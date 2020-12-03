@@ -41,7 +41,7 @@ class Spotify:
         for i, s in enumerate(stuff):
             info = {'name': s['name'], 'id': s['id']}
             self.playlists.append(info)
-            if s['name'] == 'PartyBot':
+            if s['name'] == 'DJ Chatty':
                 self.isPartyBot = i
 
     def reset_queue(self):
@@ -51,7 +51,7 @@ class Spotify:
         if self.isPartyBot != -1:
             self.sp.current_user_unfollow_playlist(self.playlists[self.isPartyBot]['id'])
 
-        self.sp.user_playlist_create(user=self.user['id'], name='PartyBot')
+        self.sp.user_playlist_create(user=self.user['id'], name='DJ Chatty')
         self.get_playlists()
 
         self.empty = True

@@ -18,9 +18,9 @@ class PartyBot:
         #                 'top:dea': '2pnMZd3r7IrqQVRBxe9CCj', 'top:ignacio': '1J7sfsybA99F8w2UOpQJlM', 'top:alejandro': '5iN04uNssYaPDtgrHCaYUY',
         #                 'top:steffen': '1M4nNxSs4748wpBiufTan8', 'playlist:paolo': '1YGHkKQfOpEQHIO06j71Dy',
         #                 'playlist:alvaro': '1FTlyHI9BQfiPgINi1zR7a', 'playlist:professor': '78sVdD9qWLWGwJZnioJ6xX'}
-        self.listIDs = {'playlist:Alvaro:Christmas': '1hwDrMP1y3fn6QgDUmFysl', "playlist:Paolo's Playlists": '3Oev8yETOHlczbqhmURedk',
-                        'artist:Mariah Carey': '5VfX5baCsv3QV5y3Z9W2s9', 'playlist:@deamarkovic:top': '2pnMZd3r7IrqQVRBxe9CCj',
-                        'playlist:steffen:top': '1M4nNxSs4748wpBiufTan8'}
+        self.listIDs = {'playlist:Alejandro:Christmas': '1hwDrMP1y3fn6QgDUmFysl', "playlist:Paolo's Playlists": '3Oev8yETOHlczbqhmURedk',
+                        'artist:Mariah Carey': '5VfX5baCsv3QV5y3Z9W2s9', 'playlist:Dea:Traffic': '2pnMZd3r7IrqQVRBxe9CCj',
+                        "playlist:Alvaro's Top": '7lfLPKDPICPC3kffI2A69B'}
 
     def fake_login(self):
         """Simple function simulating a normal user login."""
@@ -157,7 +157,12 @@ class PartyBot:
             print(response)
             possibles, functions = self.watson.print_response(response, numeric=self.numeric)
             self.interpret_assistant_order(functions)
-        return possibles
+
+            if len(functions) == 0:
+                executing = False
+            else:
+                executing = True
+        return possibles, executing
 
 
 class FakeConsole:
@@ -189,7 +194,6 @@ class FakeConsole:
 
 class InterfaceWithTelegram:
     def __init__(self):
-        self.first = True
         self.console = FakeConsole()
         self.pb = PartyBot(self.console)
         self.possibles = []
@@ -198,13 +202,18 @@ class InterfaceWithTelegram:
         self.console.save_to_input(text)
         print('User:' + text)
 
-        if self.first:
+        if text == '/start':
             self.possibles, self.functions = self.pb.start_watson()
-            self.first = False
         else:
-            self.possibles = self.pb.single_request(self.possibles)
+            self.possibles, executing = self.pb.single_request(self.possibles)
 
         toPrint = self.console.return_print()
         print('Bot: ' + toPrint)
+        if len(toPrint) == 0:
+            if not(executing):
+                toPrint = "Sorry didn't catch that. Could you repeat that?"
+            else:
+                toPrint = 'Done!'
+
         return toPrint
 
