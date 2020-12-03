@@ -1,4 +1,4 @@
-# PartyBot: A Bot for Setting Music Queues
+# PartyBot: A Bot for Setting Up Music Queues
 
 ## Description:
 
