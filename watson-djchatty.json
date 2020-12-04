@@ -1,0 +1,2682 @@
+{
+  "intents": [
+    {
+      "intent": "AddArtist",
+      "examples": [
+        {
+          "text": "add an artist"
+        },
+        {
+          "text": "add a new artist"
+        },
+        {
+          "text": "add artists to playlist"
+        },
+        {
+          "text": "add artists to queue"
+        },
+        {
+          "text": "@Artists"
+        },
+        {
+          "text": "Do you have any @Artists"
+        },
+        {
+          "text": "I would love some music from @Artists"
+        },
+        {
+          "text": "lets add an artist"
+        },
+        {
+          "text": "let's add some artists!"
+        },
+        {
+          "text": "Make me listen to some @Artists"
+        },
+        {
+          "text": "Some @Artists"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "AddFromPlaylist",
+      "examples": [
+        {
+          "text": "add from playlist"
+        },
+        {
+          "text": "add new playlists"
+        },
+        {
+          "text": "add playlist"
+        },
+        {
+          "text": "my playlist"
+        },
+        {
+          "text": "my songs"
+        },
+        {
+          "text": "new from my playlist"
+        },
+        {
+          "text": "playlist"
+        }
+      ],
+      "description": "User asks to add songs from own playlist."
+    },
+    {
+      "intent": "AddSong",
+      "examples": [
+        {
+          "text": "Add @Song"
+        },
+        {
+          "text": "include @Song"
+        },
+        {
+          "text": "new song"
+        },
+        {
+          "text": "song"
+        },
+        {
+          "text": "song by"
+        }
+      ],
+      "description": "User asks to add its own most liked songs to the queue."
+    },
+    {
+      "intent": "ChangePlaylist",
+      "examples": [
+        {
+          "text": "Change"
+        },
+        {
+          "text": "change playlist"
+        },
+        {
+          "text": "delete"
+        },
+        {
+          "text": "give me"
+        },
+        {
+          "text": "I'd like to change my playlist"
+        },
+        {
+          "text": "move"
+        },
+        {
+          "text": "next"
+        },
+        {
+          "text": "shake up my queue!"
+        },
+        {
+          "text": "Shuffle"
+        },
+        {
+          "text": "swap"
+        },
+        {
+          "text": "switch"
+        }
+      ],
+      "description": "When someone wants to change a playlist after creating it"
+    },
+    {
+      "intent": "DeleteUpcoming",
+      "examples": [
+        {
+          "text": "delete"
+        },
+        {
+          "text": "Don't want"
+        },
+        {
+          "text": "get rid of"
+        },
+        {
+          "text": "remove"
+        }
+      ],
+      "description": "The user asks to edit the upcoming tracks, by deleting one of them."
+    },
+    {
+      "intent": "DrinkingGame",
+      "examples": [
+        {
+          "text": "drinking game"
+        },
+        {
+          "text": "piccolo"
+        }
+      ],
+      "description": "User specifies that it wants to play a drinking game."
+    },
+    {
+      "intent": "Events",
+      "examples": [
+        {
+          "text": "@Events"
+        },
+        {
+          "text": "going on a road trip this weekend"
+        },
+        {
+          "text": "I am having a dinner with friends tonight"
+        },
+        {
+          "text": "I am planning a house party on friday"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Findfavoriteartist",
+      "examples": [
+        {
+          "text": "common artist"
+        },
+        {
+          "text": "Fav artist"
+        },
+        {
+          "text": "favorite artist"
+        },
+        {
+          "text": "favourite artist"
+        },
+        {
+          "text": "what is our favorite artist"
+        },
+        {
+          "text": "what is our favourite artist"
+        }
+      ],
+      "description": "Allows users to find their favorite artist"
+    },
+    {
+      "intent": "Goback",
+      "examples": [
+        {
+          "text": "back please"
+        },
+        {
+          "text": "back to menu"
+        },
+        {
+          "text": "back to start"
+        },
+        {
+          "text": "go back"
+        },
+        {
+          "text": "Go back to menu"
+        },
+        {
+          "text": "I don't want to add any more"
+        },
+        {
+          "text": "no more"
+        },
+        {
+          "text": "send me to menu"
+        }
+      ],
+      "description": "Send to menu"
+    },
+    {
+      "intent": "Mood",
+      "examples": [
+        {
+          "text": "category"
+        },
+        {
+          "text": "change category"
+        },
+        {
+          "text": "change the mood"
+        },
+        {
+          "text": "change type"
+        },
+        {
+          "text": "define mood"
+        },
+        {
+          "text": "Dinner with friends"
+        },
+        {
+          "text": "Mood"
+        },
+        {
+          "text": "@Moods"
+        },
+        {
+          "text": "new style"
+        },
+        {
+          "text": "new type of music"
+        },
+        {
+          "text": "other style"
+        },
+        {
+          "text": "relax"
+        },
+        {
+          "text": "style"
+        },
+        {
+          "text": "type"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "NewQueue",
+      "examples": [
+        {
+          "text": "lets create a new queue"
+        },
+        {
+          "text": "lets start a new queue"
+        },
+        {
+          "text": "new"
+        },
+        {
+          "text": "new playlist"
+        },
+        {
+          "text": "new queue"
+        }
+      ],
+      "description": "User asks to define a new queue of songs to play."
+    },
+    {
+      "intent": "NotifyGuests",
+      "examples": [
+        {
+          "text": "I'd like to notify guests"
+        },
+        {
+          "text": "I'd like to notify $user"
+        },
+        {
+          "text": "Warn my guests"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "PartyPrep",
+      "examples": [
+        {
+          "text": "inform my friends"
+        },
+        {
+          "text": "Inform my guests"
+        },
+        {
+          "text": "Notify my guests"
+        },
+        {
+          "text": "remind them"
+        },
+        {
+          "text": "Send a notification"
+        },
+        {
+          "text": "Send notifications"
+        },
+        {
+          "text": "Send them a sign"
+        },
+        {
+          "text": "tell my friends"
+        },
+        {
+          "text": "tell my guests"
+        }
+      ],
+      "description": "Preparations for the party"
+    },
+    {
+      "intent": "Playlists",
+      "examples": [
+        {
+          "text": "Beach Tunes"
+        },
+        {
+          "text": "Liked Songs"
+        },
+        {
+          "text": "My Study Tracks"
+        }
+      ],
+      "description": "List of Playlists"
+    },
+    {
+      "intent": "SavePlaylist",
+      "examples": [
+        {
+          "text": "save"
+        },
+        {
+          "text": "save my playlist"
+        },
+        {
+          "text": "save my queue"
+        },
+        {
+          "text": "save my queue!"
+        },
+        {
+          "text": "save my queue for later!"
+        },
+        {
+          "text": "save the playlist"
+        },
+        {
+          "text": "save this playlist"
+        },
+        {
+          "text": "save this queue"
+        },
+        {
+          "text": "save this queue!"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ShowUpcoming",
+      "examples": [
+        {
+          "text": "next"
+        },
+        {
+          "text": "next song"
+        },
+        {
+          "text": "show"
+        },
+        {
+          "text": "upcoming"
+        },
+        {
+          "text": "what's next"
+        },
+        {
+          "text": "What's the next song?"
+        }
+      ],
+      "description": "User asks the bot to show upcoming tracks in the current queue"
+    },
+    {
+      "intent": "Shuffle",
+      "examples": [
+        {
+          "text": "mix up"
+        },
+        {
+          "text": "random"
+        },
+        {
+          "text": "Shuffle"
+        },
+        {
+          "text": "shuffle!"
+        },
+        {
+          "text": "shuffle all"
+        },
+        {
+          "text": "shuffle all!"
+        }
+      ],
+      "description": "Shuffle songs from all included playlists"
+    },
+    {
+      "intent": "Songs",
+      "examples": [
+        {
+          "text": "Anaconda"
+        },
+        {
+          "text": "Baby"
+        },
+        {
+          "text": "Billy Jean"
+        },
+        {
+          "text": "Cry Me A River"
+        },
+        {
+          "text": "Despacito"
+        },
+        {
+          "text": "Diamonds are a girl's best friend"
+        },
+        {
+          "text": "Enter Sandman"
+        },
+        {
+          "text": "Smooth Criminal"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Start",
+      "examples": [
+        {
+          "text": "greetings"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hi!"
+        },
+        {
+          "text": "wassup"
+        },
+        {
+          "text": "yo"
+        }
+      ],
+      "description": "Triggers Welcome dialog node."
+    },
+    {
+      "intent": "Top100",
+      "examples": [
+        {
+          "text": "add from my favourite songs"
+        },
+        {
+          "text": "add from my most liked"
+        },
+        {
+          "text": "add from my most liked songs"
+        },
+        {
+          "text": "add from my own top songs"
+        },
+        {
+          "text": "add from my top songs"
+        }
+      ],
+      "description": "Pick 100 most listened to songs (by users) in the playlist"
+    },
+    {
+      "intent": "Whoscoming",
+      "examples": [
+        {
+          "text": "@users",
+          "mentions": [
+            {
+              "entity": "Users",
+              "location": [
+                1,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Users is invited",
+          "mentions": [
+            {
+              "entity": "Users",
+              "location": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "who's coming to the event? "
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Artists",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Drake",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Eminem",
+          "synonyms": [
+            "Slim Shady"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Justin Bieber",
+          "synonyms": [
+            "Bieber",
+            "JB"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Mariah Carey",
+          "synonyms": [
+            "Maria Cary"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Metallica",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ozuna",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Rihanna",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Skrillex",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "The Weeknd",
+          "synonyms": [
+            "The Weekend"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Events",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Board Games",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "CarPool",
+          "synonyms": [
+            "car pooling",
+            "sharing a bla bla car",
+            "sharing a cab",
+            "sharing a car",
+            "sharing an uber",
+            "uber pooling"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Dinner",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Family event",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Party",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Playdate",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Relax",
+          "synonyms": [
+            "Beach",
+            "Fireplace",
+            "Sunday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Study Session",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Moods",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Chill",
+          "synonyms": [
+            "chill",
+            "Chill Dinner",
+            "easy",
+            "low-key",
+            "quiet",
+            "relaxed",
+            "sleep",
+            "Study",
+            "vibes"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Christmas",
+          "synonyms": [
+            "christmas",
+            "december",
+            "ho ho ho",
+            "snow",
+            "winter",
+            "xmas"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "EDM",
+          "synonyms": [
+            "danceability",
+            "Dance Music",
+            "dubstep",
+            "EDM",
+            "electro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Metal",
+          "synonyms": [
+            "headbang",
+            "heavy",
+            "loud",
+            "metal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Motivational",
+          "synonyms": [
+            "motivational",
+            "movie music",
+            "orchestra",
+            "orchestral",
+            "video game"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pop",
+          "synonyms": [
+            "pop",
+            "popular",
+            "radio",
+            "top hits"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Road Trip",
+          "synonyms": [
+            "classic",
+            "roadtrip",
+            "road trip",
+            "travelling"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Traffic",
+          "synonyms": [
+            "crosstown",
+            "driving",
+            "hurry",
+            "traffic"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Playlists",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Alvaro's Playlist",
+          "synonyms": [
+            "reggae",
+            "reggaeton"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "None",
+          "synonyms": [
+            "none",
+            "no playlist",
+            "unnecessary"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Paolo's Playlists",
+          "synonyms": [
+            "Battle Music",
+            "Paolo's Liked Songs"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Songs",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Baby",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Enter Sandman",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mumbo number 5",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Users",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Ale",
+          "synonyms": [
+            "alejandro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Alejandro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Alvaro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dea",
+          "synonyms": [
+            "deamarkovik",
+            "markovik"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ignacio",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paolo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Professor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Steffen",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "YesNo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": [
+            "Nah",
+            "no",
+            "Nope",
+            "No Thanks",
+            "nu-uh"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": [
+            "absolutely",
+            "indeed",
+            "please",
+            "thank you",
+            "Yeah",
+            "Yep",
+            "Yes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1606144518132",
+      "context": {
+        "Moods": "@Moods"
+      },
+      "conditions": "@Moods",
+      "event_name": "input",
+      "dialog_node": "handler_10_1606144518179"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Who's coming?",
+            "Who's playlists would you like to combine?",
+            "Who else will want their music playing?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1606145264458",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1606145264459",
+      "previous_sibling": "handler_2_1606145264459"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606226215993",
+      "context": {
+        "Mood": "@Moods"
+      },
+      "conditions": "@Moods",
+      "event_name": "input",
+      "dialog_node": "handler_10_1606226215994"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Shuffling!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_1_1606226237236",
+      "conditions": "#Shuffle",
+      "event_name": "filled",
+      "dialog_node": "handler_10_1607000650358",
+      "previous_sibling": "handler_1_1606226237238"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1607001669621",
+      "context": {
+        "Users_2": "@Users"
+      },
+      "conditions": "@Users",
+      "event_name": "input",
+      "dialog_node": "handler_10_1607001669623"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1607001681254",
+      "context": {
+        "Users_3": "@Users"
+      },
+      "conditions": "@Users",
+      "event_name": "input",
+      "dialog_node": "handler_10_1607001681255"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1606145307569",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1606145307570",
+      "previous_sibling": "handler_8_1606145307570"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1606145336214",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1606145336215",
+      "previous_sibling": "handler_9_1606145336215"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What is the event you are planning?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1606146652855",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1606146652856",
+      "previous_sibling": "handler_9_1606146652856"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Which song would you like to delete from your queue?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1606209678042",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1606209678051",
+      "previous_sibling": "handler_2_1606209678051"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1606226237236",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1606226237238",
+      "previous_sibling": "handler_9_1606226237238"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1607001669621",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1607001669623",
+      "previous_sibling": "handler_10_1607001669623"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606145264458",
+      "context": {
+        "Users": "@Users"
+      },
+      "conditions": "@Users",
+      "event_name": "input",
+      "dialog_node": "handler_2_1606145264459"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606209678042",
+      "context": {
+        "Songs": "@Songs"
+      },
+      "conditions": "@Songs",
+      "event_name": "input",
+      "dialog_node": "handler_2_1606209678051"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1606209781695",
+      "context": {
+        "Playlists": "@Playlists"
+      },
+      "conditions": "@Playlists",
+      "event_name": "input",
+      "dialog_node": "handler_2_1606209781705"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1606226198594",
+      "context": {
+        "AddSong": "#AddSong"
+      },
+      "conditions": "#AddSong",
+      "event_name": "input",
+      "dialog_node": "handler_2_1606226198607"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606226229364",
+      "context": {
+        "DeleteUpcoming": "#DeleteUpcoming"
+      },
+      "conditions": "#DeleteUpcoming",
+      "event_name": "input",
+      "dialog_node": "handler_2_1606226229365"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your queue is now a whole lot more $Moods"
+              }
+            ],
+            "response_type": "text"
+          },
+          {
+            "values": [
+              {
+                "text": "function:ChangeMoods, $Moods"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_23_1606228972494",
+      "conditions": "@Moods",
+      "event_name": "filled",
+      "dialog_node": "handler_2_1606236789025",
+      "previous_sibling": "handler_25_1606228972494"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_23_1606228972494",
+      "context": {
+        "Moods": "@Moods"
+      },
+      "conditions": "@Moods",
+      "event_name": "input",
+      "dialog_node": "handler_24_1606228972494"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What mood would you prefer?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_23_1606228972494",
+      "event_name": "focus",
+      "dialog_node": "handler_25_1606228972494",
+      "previous_sibling": "handler_24_1606228972494"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$Songs has been added to the queue"
+              }
+            ],
+            "response_type": "text"
+          },
+          {
+            "values": [
+              {
+                "text": "function:AddSong, $Songs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1606210004699",
+      "conditions": "@Songs",
+      "event_name": "filled",
+      "dialog_node": "handler_3_1606236953388",
+      "previous_sibling": "handler_6_1606210004700"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1606379425092",
+      "context": {
+        "Songs": "@Songs"
+      },
+      "conditions": "@Songs",
+      "event_name": "input",
+      "dialog_node": "handler_3_1606379425092"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1607000321500",
+      "context": {
+        "Artists": "@Artists"
+      },
+      "conditions": "@Artists",
+      "event_name": "input",
+      "dialog_node": "handler_3_1607000321500"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1607001699777",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1607001699778",
+      "previous_sibling": "handler_5_1607001699778"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1607001707075",
+      "context": {
+        "Users_5": "@Users"
+      },
+      "conditions": "@Users",
+      "event_name": "input",
+      "dialog_node": "handler_3_1607001707075"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_38_1606295325767",
+      "context": {
+        "Artists": "@Artists"
+      },
+      "conditions": "@Artists",
+      "event_name": "input",
+      "dialog_node": "handler_39_1606295325767"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Which artists would you like to add?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_38_1606295325767",
+      "event_name": "focus",
+      "dialog_node": "handler_40_1606295325767",
+      "previous_sibling": "handler_39_1606295325767"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We love $Artists , let's add them to our queue"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "function:AddArtists,$Artists"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_38_1606295325767",
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "@Artists",
+      "event_name": "filled",
+      "dialog_node": "handler_41_1606295325767",
+      "previous_sibling": "handler_40_1606295325767"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What is the mood for this event?",
+            "What are you planning for tonight?",
+            "What is the mood you want to set"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1606144518132",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1606144518179",
+      "previous_sibling": "handler_10_1606144518179"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1606210004699",
+      "context": {
+        "Songs": "@Songs"
+      },
+      "conditions": "@Songs",
+      "event_name": "input",
+      "dialog_node": "handler_4_1606210004700"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1606226198594",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1606226198607",
+      "previous_sibling": "handler_2_1606226198607"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1606226223618",
+      "context": {
+        "AddFromPlaylist": "#AddFromPlaylist"
+      },
+      "conditions": "#AddFromPlaylist",
+      "event_name": "input",
+      "dialog_node": "handler_4_1606226223619"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What song would you like to add?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1606379425092",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1606379425092",
+      "previous_sibling": "handler_3_1606379425092"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Would you like to add more artists or make other changes?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1607000321500",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1607000321500",
+      "previous_sibling": "handler_3_1607000321500"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1607001707075",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1607001707075",
+      "previous_sibling": "handler_3_1607001707075"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1607001712257",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1607001712257",
+      "previous_sibling": "handler_8_1607001712257"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606145325849",
+      "context": {
+        "Findfavoriteartist": "#Findfavoriteartist"
+      },
+      "conditions": "#Findfavoriteartist",
+      "event_name": "input",
+      "dialog_node": "handler_5_1606145325851"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1606145362722",
+      "context": {
+        "Playlist": "#Playlists"
+      },
+      "conditions": "#Playlists",
+      "event_name": "input",
+      "dialog_node": "handler_5_1606145362723"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$Songs has been added to the queue"
+              }
+            ],
+            "response_type": "text"
+          },
+          {
+            "values": [
+              {
+                "text": "function:AddSong, $Songs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1606379425092",
+      "conditions": "@Songs",
+      "event_name": "filled",
+      "dialog_node": "handler_5_1606379425092",
+      "previous_sibling": "handler_4_1606379425092"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1607001681254",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1607001681255",
+      "previous_sibling": "handler_10_1607001681255"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1607001699777",
+      "context": {
+        "Users_4": "@Users"
+      },
+      "conditions": "@Users",
+      "event_name": "input",
+      "dialog_node": "handler_5_1607001699778"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_51_1606295800085",
+      "context": {
+        "Events": "@Events"
+      },
+      "conditions": "@Events",
+      "event_name": "input",
+      "dialog_node": "handler_52_1606295800085"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What event will you be preparing?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_51_1606295800085",
+      "event_name": "focus",
+      "dialog_node": "handler_53_1606295800085",
+      "previous_sibling": "handler_52_1606295800085"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Have a great $Events"
+              }
+            ],
+            "response_type": "text"
+          },
+          {
+            "values": [
+              {
+                "text": "function:ChangeMoods, $Events"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_51_1606295800085",
+      "conditions": "@Events",
+      "event_name": "filled",
+      "dialog_node": "handler_54_1606295800085",
+      "previous_sibling": "handler_53_1606295800085"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1606145362722",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1606145362723",
+      "previous_sibling": "handler_5_1606145362723"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What song would you like to add?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1606210004699",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1606210004700",
+      "previous_sibling": "handler_4_1606210004700"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606226215993",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1606226215994",
+      "previous_sibling": "handler_10_1606226215994"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606226229364",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1606226229365",
+      "previous_sibling": "handler_2_1606226229365"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which playlist would you like to add?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_9_1606209781695",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1606209781705",
+      "previous_sibling": "handler_2_1606209781705"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1606226223618",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1606226223619",
+      "previous_sibling": "handler_4_1606226223619"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1606145307569",
+      "context": {
+        "Top100": "#Top100"
+      },
+      "conditions": "#Top100",
+      "event_name": "input",
+      "dialog_node": "handler_8_1606145307570"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1607001712257",
+      "context": {
+        "Users_6": "@Users"
+      },
+      "conditions": "@Users",
+      "event_name": "input",
+      "dialog_node": "handler_8_1607001712257"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1606145325849",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1606145325851",
+      "previous_sibling": "handler_5_1606145325851"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1606145336214",
+      "context": {
+        "Shuffle": "#Shuffle"
+      },
+      "conditions": "#Shuffle",
+      "event_name": "input",
+      "dialog_node": "handler_9_1606145336215"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1606146652855",
+      "context": {
+        "Events": "@Events"
+      },
+      "conditions": "@Events",
+      "event_name": "input",
+      "dialog_node": "handler_9_1606146652856"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1606226237236",
+      "context": {
+        "Shuffle": "#Shuffle"
+      },
+      "conditions": "#Shuffle",
+      "event_name": "input",
+      "dialog_node": "handler_9_1606226237238"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great, which song?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1606226198594",
+      "conditions": "#AddSong",
+      "event_name": "filled",
+      "dialog_node": "handler_9_1606227109754",
+      "previous_sibling": "handler_4_1606226198607"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function:AddFromPlaylist,$Playlists"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_9_1606209781695",
+      "conditions": "@Playlists",
+      "event_name": "filled",
+      "dialog_node": "handler_9_1606405356681",
+      "previous_sibling": "handler_7_1606209781705"
+    },
+    {
+      "type": "standard",
+      "title": "Show Upcoming Tracks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function:ShowUpcoming"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ShowUpcoming",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1605030241181",
+      "previous_sibling": "node_9_1605784711567"
+    },
+    {
+      "type": "standard",
+      "title": "Shuffle",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Shuffling!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "function:Shuffle"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1605784711567",
+      "conditions": "#Shuffle",
+      "dialog_node": "node_1_1606077026483",
+      "previous_sibling": "node_2_1605030224391"
+    },
+    {
+      "type": "frame",
+      "title": "Add a Song - copy1",
+      "output": {},
+      "parent": "node_2_1606209820232",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#AddSong || @Songs || #Songs",
+      "dialog_node": "node_1_1606379425090"
+    },
+    {
+      "type": "frame",
+      "title": "Add an Artist - copy1",
+      "output": {},
+      "parent": "node_33_1606295325765",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#AddArtist || @Artists",
+      "dialog_node": "node_1_1607000321498"
+    },
+    {
+      "type": "frame",
+      "title": "Change the Mood",
+      "output": {},
+      "parent": "node_9_1605784711567",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Mood || @Moods",
+      "dialog_node": "node_12_1606228972494",
+      "previous_sibling": "node_33_1606295325765"
+    },
+    {
+      "type": "frame",
+      "title": "Delete Next Song",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function: DeleteUpcoming, $DeleteUpcoming"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "No need for that rubbish in our queue, $Songs is gone!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1605784711567",
+      "conditions": "#DeleteUpcoming",
+      "dialog_node": "node_2_1605030224391",
+      "previous_sibling": "node_9_1606209758642"
+    },
+    {
+      "type": "frame",
+      "title": "Add a Song",
+      "parent": "node_9_1605784711567",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#AddSong || @Songs || #Songs",
+      "dialog_node": "node_2_1606209820232",
+      "previous_sibling": "slot_1_1606226237236"
+    },
+    {
+      "type": "standard",
+      "title": "Which playlist",
+      "parent": "node_5_1605030086609",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Users",
+      "dialog_node": "node_3_1605786142547"
+    },
+    {
+      "type": "standard",
+      "title": "Party Planner",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#PartyPrep",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1606147302507",
+      "previous_sibling": "node_10_1605030241181"
+    },
+    {
+      "type": "frame",
+      "title": "Add an Artist",
+      "output": {},
+      "parent": "node_9_1605784711567",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#AddArtist || @Artists",
+      "dialog_node": "node_33_1606295325765",
+      "previous_sibling": "node_2_1606209820232"
+    },
+    {
+      "type": "frame",
+      "title": "Change Event",
+      "output": {},
+      "parent": "node_9_1605784711567",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Events || @Events",
+      "dialog_node": "node_46_1606295800083",
+      "previous_sibling": "node_12_1606228972494"
+    },
+    {
+      "type": "standard",
+      "title": "Add a Playlist to Queue",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Whose playlist would you like to add?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1605030015281",
+      "conditions": "#AddFromPlaylist",
+      "dialog_node": "node_5_1605030086609",
+      "previous_sibling": "response_1_1605783914187"
+    },
+    {
+      "type": "standard",
+      "title": "Add From Current User's Top Songs",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Adding from your most liked songs!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "function:AddFromPlaylist,Alvaro's Top,$User,$User_1,$User_2,$User_3,$User_4,$User_5,$User_6"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1605784711567",
+      "conditions": "#Top100",
+      "dialog_node": "node_6_1606938019953",
+      "previous_sibling": "node_1_1606077026483"
+    },
+    {
+      "type": "standard",
+      "title": "Save Playlist",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sure thing! I'll store this playlist for you!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#SavePlaylist",
+      "dialog_node": "node_7_1606588220470",
+      "previous_sibling": "node_3_1606147302507"
+    },
+    {
+      "type": "folder",
+      "title": "Drinking Game",
+      "conditions": "#DrinkingGame",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1605030455153",
+      "previous_sibling": "node_7_1606588220470"
+    },
+    {
+      "type": "frame",
+      "title": "Plan an event",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function:NewQueue,$Moods,$Users,$Events,$Shuffle,$Top100,$Findfavoriteartist,"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Your queue has been created based on your preferences, press shake it up to begin editing your new Queue!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#NewQueue",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1605030015281",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "title": "Change Playlist",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What would you like to change?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ChangePlaylist",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1605784711567",
+      "previous_sibling": "node_9_1605030015281"
+    },
+    {
+      "type": "frame",
+      "title": "Add Playlist",
+      "parent": "node_9_1605784711567",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#AddFromPlaylist",
+      "dialog_node": "node_9_1606209758642",
+      "previous_sibling": "node_46_1606295800083"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function:playlist:professor"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1605786142547",
+      "conditions": "@Users:Professor",
+      "dialog_node": "response_10_1605786227161"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "",
+            "options": [],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1605030015281",
+      "disabled": true,
+      "dialog_node": "response_1_1605783914187",
+      "previous_sibling": "slot_1_1607001712257"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "This is Partybot! How can I help you today?",
+            "options": [
+              {
+                "label": "I would like to login",
+                "value": {
+                  "input": {
+                    "text": "Login"
+                  }
+                }
+              },
+              {
+                "label": "Let's start the tunes",
+                "value": {
+                  "input": {
+                    "text": "new playlist"
+                  }
+                }
+              },
+              {
+                "label": "Games!",
+                "value": {
+                  "input": {
+                    "text": "drinking"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "disabled": true,
+      "dialog_node": "response_2_1605783578805"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We will send a notification to $User to remind them of your $Event"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "function:PartyPrep, $User, $Event"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1606147302507",
+      "conditions": "#PartyPrep",
+      "dialog_node": "response_2_1606320765939"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Are you finished adding songs?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1606228972494",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_32_1606228972494"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function:playlist:alvaro"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1605786142547",
+      "conditions": "@Users:Alvaro",
+      "dialog_node": "response_4_1606071115172",
+      "previous_sibling": "response_8_1605786247892"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_33_1606295325765",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#Goback",
+      "dialog_node": "response_4_1607000249573",
+      "previous_sibling": "response_45_1606295325767"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Add more artists! Or would you like to change your playlist?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_33_1606295325765",
+      "context": {},
+      "conditions": "anything_else",
+      "dialog_node": "response_45_1606295325767",
+      "previous_sibling": "node_1_1607000321498"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What other songs would you like to add?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1606209820232",
+      "context": {},
+      "conditions": "anything_else",
+      "dialog_node": "response_5_1606227983393",
+      "previous_sibling": "node_1_1606379425090"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1606379425090",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#Goback",
+      "dialog_node": "response_5_1607000095843",
+      "previous_sibling": "response_6_1606379425092"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Are you finished adding songs?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_46_1606295800083",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_58_1606295800085"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What other songs would you like to add?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1606379425090",
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_2_1606209820232"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_6_1606379425092"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What other changes?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1607000321498",
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_33_1606295325765"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_6_1607000321500"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What else would you like to change?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1607000321498",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1605784711567"
+      },
+      "conditions": "#Goback",
+      "dialog_node": "response_7_1607000321500",
+      "previous_sibling": "response_6_1607000321500"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "function:playlist:paolo"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1605786142547",
+      "conditions": "@Users:Paolo",
+      "dialog_node": "response_8_1605786247892",
+      "previous_sibling": "response_10_1605786227161"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1606209820232",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#Goback",
+      "dialog_node": "response_8_1607000221752",
+      "previous_sibling": "response_5_1606227983393"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1605030015281",
+      "variable": "$Users",
+      "dialog_node": "slot_10_1606145264458",
+      "previous_sibling": "slot_5_1606144518132"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Findfavoriteartist",
+      "dialog_node": "slot_10_1606145325849",
+      "previous_sibling": "slot_2_1606145307569"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1605030224391",
+      "variable": "$Songs",
+      "dialog_node": "slot_10_1606209678042"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605784711567",
+      "variable": "$Mood",
+      "dialog_node": "slot_10_1606226215993",
+      "previous_sibling": "slot_6_1606226198594"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605784711567",
+      "variable": "$DeleteUpcoming",
+      "dialog_node": "slot_10_1606226229364",
+      "previous_sibling": "slot_5_1606226223618"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1605784711567",
+      "variable": "$Shuffle",
+      "dialog_node": "slot_1_1606226237236",
+      "previous_sibling": "slot_10_1606226229364"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Users_6",
+      "dialog_node": "slot_1_1607001712257",
+      "previous_sibling": "slot_5_1607001707075"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Top100",
+      "dialog_node": "slot_2_1606145307569",
+      "previous_sibling": "slot_2_1606145362722"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Playlist",
+      "dialog_node": "slot_2_1606145362722",
+      "previous_sibling": "slot_8_1606146652855"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1606379425090",
+      "variable": "$Songs",
+      "conditions": "",
+      "dialog_node": "slot_2_1606379425092",
+      "previous_sibling": "response_5_1607000095843"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1607000321498",
+      "variable": "$Artists",
+      "dialog_node": "slot_2_1607000321500",
+      "previous_sibling": "response_7_1607000321500"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Users_2",
+      "dialog_node": "slot_2_1607001669621",
+      "previous_sibling": "slot_6_1606145336214"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Users_3",
+      "dialog_node": "slot_2_1607001681254",
+      "previous_sibling": "slot_2_1607001669621"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1606228972494",
+      "variable": "$Moods",
+      "conditions": "",
+      "dialog_node": "slot_23_1606228972494",
+      "previous_sibling": "response_32_1606228972494"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_33_1606295325765",
+      "variable": "$Artists",
+      "dialog_node": "slot_38_1606295325767",
+      "previous_sibling": "response_4_1607000249573"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_46_1606295800083",
+      "variable": "$Events",
+      "dialog_node": "slot_51_1606295800085",
+      "previous_sibling": "response_58_1606295800085"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1605030015281",
+      "variable": "$Moods",
+      "dialog_node": "slot_5_1606144518132"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605784711567",
+      "variable": "$AddFromPlaylist",
+      "dialog_node": "slot_5_1606226223618",
+      "previous_sibling": "slot_10_1606226215993"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Users_4",
+      "dialog_node": "slot_5_1607001699777",
+      "previous_sibling": "slot_2_1607001681254"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Users_5",
+      "dialog_node": "slot_5_1607001707075",
+      "previous_sibling": "slot_5_1607001699777"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1605030015281",
+      "variable": "$Shuffle",
+      "dialog_node": "slot_6_1606145336214",
+      "previous_sibling": "slot_10_1606145325849"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1605784711567",
+      "variable": "$AddSong",
+      "dialog_node": "slot_6_1606226198594"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1605030015281",
+      "variable": "$Events",
+      "dialog_node": "slot_8_1606146652855",
+      "previous_sibling": "slot_10_1606145264458"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1606209820232",
+      "variable": "$Songs",
+      "conditions": "",
+      "dialog_node": "slot_8_1606210004699",
+      "previous_sibling": "response_8_1607000221752"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1606209758642",
+      "variable": "$Playlists",
+      "dialog_node": "slot_9_1606209781695"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "title": "This is DJ Chatty! How can I help you today?",
+            "options": [
+              {
+                "label": "Start a new music Queue",
+                "value": {
+                  "input": {
+                    "text": "new playlist"
+                  }
+                }
+              },
+              {
+                "label": "Shake up my Queue",
+                "value": {
+                  "input": {
+                    "text": "change playlist"
+                  }
+                }
+              },
+              {
+                "label": "Games!",
+                "value": {
+                  "input": {
+                    "text": "game"
+                  }
+                }
+              },
+              {
+                "label": "What's coming up next?",
+                "value": {
+                  "input": {
+                    "text": "show"
+                  }
+                }
+              },
+              {
+                "label": "Save the date!",
+                "value": {
+                  "input": {
+                    "text": "remind them"
+                  }
+                }
+              },
+              {
+                "label": "Save the playlist",
+                "value": {
+                  "input": {
+                    "text": "save the playlist"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome || #Start || #Goback",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome",
+      "digress_out": "allow_all"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 3,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
